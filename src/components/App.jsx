@@ -3,8 +3,6 @@ import { FeedbackOptions } from 'components/FeedbackOptions/FeedbackOptions';
 import { Section } from 'components/Section/Section'
 import { Notification } from 'components/Notification/Notification'
 import { Component } from 'react';
-import ReactDOM from "react-dom";
-import feedbackWidget from 'feedbackWidget.json';
 
  export class App extends Component {
    state = {
