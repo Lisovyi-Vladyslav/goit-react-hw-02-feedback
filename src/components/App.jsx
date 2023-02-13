@@ -17,16 +17,12 @@ import { Component } from 'react';
   this.setState(prevState => {
     return {positiveFeedbackPercentage:  Math.round((prevState.good * 100) / prevState.total.toFixed(5)) + "%"}
   });
-
   };
 
    countTotalFeedback = () => {
-   
-     
      this.setState(prevState => {
       return {total: prevState.good + prevState.neutral + prevState.bad}
     });
-    
       this.countPositiveFeedbackPercentage();
   } 
 
@@ -40,7 +36,7 @@ import { Component } from 'react';
    
   render() {
     const { good, neutral, bad, total, positiveFeedbackPercentage } = this.state;
-console.log(this.state);
+
     return (
       <>
         <Section title="Please leave feedback">
