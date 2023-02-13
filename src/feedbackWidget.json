@@ -1,0 +1,7 @@
+[
+{"id": "good", "title":"Good"},
+{"id": "neutral", "title":"Neutral"},
+{"id": "bad", "title":"Bad"},
+{"id": "total", "title":"Total"},
+{"id": "positivePercentage", "title":"Positive Feedback"}
+]
