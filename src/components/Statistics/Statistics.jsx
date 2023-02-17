@@ -19,7 +19,7 @@ export const Statistics = (props) => {
 
 
 Statistics.propTypes = {
-  positivePercentage: PropTypes.number,
+  positivePercentage: PropTypes.string,
   total: PropTypes.number,
   bad: PropTypes.number,
   neutral: PropTypes.number,

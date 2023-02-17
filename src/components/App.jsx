@@ -3,6 +3,7 @@ import { FeedbackOptions } from 'components/FeedbackOptions/FeedbackOptions';
 import { Section } from 'components/Section/Section'
 import { Notification } from 'components/Notification/Notification'
 import { Component } from 'react';
+import feedbackOptions from 'feedbackOptions.json';
 
  export class App extends Component {
    state = {
@@ -40,7 +41,7 @@ import { Component } from 'react';
     return (
       <>
         <Section title="Please leave feedback">
-          <FeedbackOptions  onLeaveFeedback={this.handleClick}/> 
+          <FeedbackOptions options={feedbackOptions}  onLeaveFeedback={this.handleClick}/> 
         </Section>
          {total === 0 ? (
         <Notification message="There is no feedback"/>
