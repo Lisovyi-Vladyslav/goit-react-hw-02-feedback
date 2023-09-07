@@ -2,13 +2,14 @@ import { Statistics } from 'components/Statistics/Statistics';
 import { FeedbackOptions } from 'components/FeedbackOptions/FeedbackOptions';
 import { Section } from 'components/Section/Section'
 import { Notification } from 'components/Notification/Notification'
+
 import { Component } from 'react';
 import feedbackOptions from 'feedbackOptions.json';
 
  export class App extends Component {
    state = {
-  good: 0,
-  neutral: 0,
+     good: 0,
+     neutral: 0,
      bad: 0,
      total: 0,
      positiveFeedbackPercentage: 0,
@@ -29,8 +30,9 @@ import feedbackOptions from 'feedbackOptions.json';
 
    handleClick = event => {
      const { name } = event.target;
+     console.log(name)
      this.setState(prevState => ({
-       [name]: prevState[name] + 1,
+      good: prevState.good + 1,
      }));
       this.countTotalFeedback();
    };
@@ -50,6 +52,7 @@ import feedbackOptions from 'feedbackOptions.json';
           <Statistics good={good} neutral={neutral} bad={bad} total={total} positivePercentage={positiveFeedbackPercentage} />
         </Section>
       )}
+     
       </>
           
     );
